@@ -14,9 +14,14 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import de.NLG.WakeApp.Main.databinding.ActivityMainBinding;
+import de.NLG.WakeApp.DB.Database;
 
 import android.view.Menu;
 import android.view.MenuItem;
+
+import org.json.JSONArray;
+
+import java.sql.Connection;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-
+        Database db = new Database();
+        Connection con = Database.getDb();
+        JSONArray arr = db.getSchedules();
+        System.out.print(arr);
     }
 
     @Override
