@@ -1,0 +1,256 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_80"
+    android:id="@+id/test"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/wakeapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/color_10"
+        android:textSize="32sp"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/dummyView"
+        android:layout_below="@+id/wakeapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/time1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:fontFamily="sans-serif-medium"
+        android:layout_toLeftOf="@id/dummyView"
+        android:layout_below="@+id/dummyView"
+        android:text="Ankunftszeit"
+        android:textAlignment="center"
+        android:textColor="@color/color_10"
+        android:textSize="22sp"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:fontFamily="sans-serif-medium"
+        android:text="Benötigte Zeit"
+        android:layout_toRightOf="@id/dummyView"
+        android:layout_below="@+id/dummyView"
+        android:textAlignment="center"
+        android:textColor="@color/color_10"
+        android:textSize="22sp"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/fromDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time2"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_toLeftOf="@id/dummyView"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:maxLines="1"
+        android:text="-/-"
+        android:textColor="@color/color_30"
+        android:textSize="15sp"
+        app:backgroundTint="@color/color_80"
+        tools:ignore="SmallSp" />
+
+
+    <EditText
+        android:id="@+id/toDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time2"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_toRightOf="@id/dummyView"
+        android:gravity="center_horizontal"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:maxLines="1"
+        android:text="-/-"
+        android:textColor="@color/color_30"
+        android:textSize="15sp"
+        app:backgroundTint="@color/color_80"
+        tools:ignore="SmallSp"
+        />
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:fontFamily="sans-serif-medium"
+        android:layout_toLeftOf="@id/dummyView"
+        android:layout_below="@+id/fromDate"
+        android:text="Wohnort"
+        android:textAlignment="center"
+        android:textColor="@color/color_10"
+        android:textSize="22sp"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+    <TextView
+        android:id="@+id/to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:fontFamily="sans-serif-medium"
+        android:text="Ziel Ort"
+        android:layout_toRightOf="@id/from"
+        android:layout_below="@+id/fromDate"
+        android:textAlignment="center"
+        android:textColor="@color/color_10"
+        android:textSize="22sp"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/gps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/from"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_toLeftOf="@id/dummyView"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:maxLines="1"
+        android:text="-/-"
+        android:textColor="@color/color_30"
+        android:textSize="15sp"
+        app:backgroundTint="@color/color_80"
+        tools:ignore="SmallSp" />
+
+    <EditText
+        android:id="@+id/toText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_toRightOf="@id/fromDate"
+        android:layout_below="@+id/to"
+        android:gravity="center_horizontal"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:maxLines="1"
+        android:text="-/-"
+        android:textColor="@color/color_30"
+        android:textSize="15sp"
+        app:backgroundTint="@color/color_80"
+        tools:ignore="SmallSp"
+        />
+
+    <TextView
+        android:id="@+id/waytoschool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:fontFamily="sans-serif-medium"
+        android:text="Weg zur Schule"
+        android:layout_below="@+id/toText"
+        android:textAlignment="center"
+        android:textColor="@color/color_10"
+        android:textSize="22sp"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/waytoschool"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:orientation="horizontal"
+
+        >
+        <RadioButton
+            android:id="@+id/radioButton_male"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_10"
+            android:buttonTint="@color/color_30"
+            android:layout_weight="1"
+            android:text="Öffis" />
+
+        <RadioButton
+            android:id="@+id/radioButton_female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_10"
+            android:buttonTint="@color/color_30"
+            android:layout_weight="1"
+            android:text="Auto" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radio_group"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:fontFamily="sans-serif-medium"
+        android:text="-/-"
+        android:textAlignment="center"
+        android:textColor="@color/color_10"
+        android:textSize="22sp"
+        tools:ignore="MissingConstraints,UnknownIdInLayout" />
+
+    <Button
+        android:id="@+id/nextToStep4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:backgroundTint="@color/color_30"
+        android:enabled="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="Berechnen"
+        android:textSize="22sp" />
+
+
+
+</RelativeLayout>
