@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_80"
+    android:id="@+id/test"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/back"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        app:cardElevation="4dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/historyView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@android:color/transparent"
+            tools:listitem="@layout/item_activity" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:backgroundTint="@color/color_30"
+        android:padding="@dimen/fab_margin"
+        android:enabled="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="Zurück"
+        android:textSize="22sp"
+    />
+
+</RelativeLayout>

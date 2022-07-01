@@ -1,5 +1,7 @@
 package de.NLG.WakeApp.Main;
 
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.android.volley.AuthFailureError;
@@ -48,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(binding.toolbar);
 
-
     }
 
     @Override
@@ -67,7 +68,8 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+          getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment_content_main,new HistoryFragment()).commit();
+          return true;
         }
 
         return super.onOptionsItemSelected(item);
